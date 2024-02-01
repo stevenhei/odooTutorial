@@ -18,4 +18,4 @@ class Property(models.Model):
     garden_orientation = fields.Selection(
         selection = [("North", "north"),("West", "west"),("East","east"),("South","south")]
     )
-    active = fields.Boolean()
+    active = fields.Boolean(default=True)
