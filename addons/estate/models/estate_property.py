@@ -19,3 +19,9 @@ class Property(models.Model):
         selection = [("North", "north"),("West", "west"),("East","east"),("South","south")]
     )
     active = fields.Boolean(default=True)
+    state = fields.Selection(
+        selection = [("new","New"), ("offer_received","Offer Received"), ("offer_cccepted","Offer Accepted"), ("sold","Sold"), ("canceled","Canceled")],
+        required = True,
+        default = "new",
+        copy = False,
+    )
