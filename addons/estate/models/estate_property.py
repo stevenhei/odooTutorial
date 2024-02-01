@@ -1,5 +1,5 @@
-from odoo import models
+from odoo import fields, models
 
 class Property(models.Model):
     _name = "estate.property"
-    # state = fields.
+    _description = "Properties of an estate"
